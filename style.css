@@ -1,0 +1,199 @@
+body {
+  font-family: Dosis, sans-serif;
+  background: none;
+}
+
+#player-card {
+  max-width: 240px;
+  max-height: 355px;
+  background: rgba(0,212,255,1);
+  background: linear-gradient(45deg, rgb(225, 109, 243) 3%, rgb(230, 119, 247) 9%, rgb(198, 125, 253) 14%, rgb(176, 139, 255) 20%, rgb(137, 196, 255) 29%, rgb(144, 237, 255) 42%);
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  overflow: hidden;
+}
+
+#now-playing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#cover-art {
+  margin-bottom: 10px;
+}
+
+#cover-art-image {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#track-info {
+  text-align: center;
+  width: 100%;
+  color: #404040;
+  text-wrap: nowrap;
+}
+
+#track-title {
+  font-size: 0.9em;
+  font-weight: bold;
+  margin-bottom: 2px;
+  padding-left: 5px;
+}
+
+#track-artist {
+  font-size: 0.8em;
+  color: #404040;
+  margin-bottom: 5px;
+  padding-left: 8px;
+}
+
+#radio-controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  flex-wrap: nowrap;
+  justify-items: center;
+  gap: 20%;
+  padding-bottom: 8px;
+}
+
+#volume-control {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.control-button {
+  background: none;
+  border: none;
+  color: #404040;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+.control-button:hover {
+  color: #ccc;
+}
+
+#volume-button {
+  position: relative;
+  size: 1.2em;
+  margin-right: auto;
+}
+
+#play-button {
+  position: relative;
+  margin: 10px;
+}
+
+#volume-slider {
+  width: auto;
+  display: flex;
+  max-width: 100px;
+  margin-right: 10px;
+}
+
+input[type=range] {
+  width: 100%;
+  margin: 4.3px 0;
+  background-color: transparent;
+  -webkit-appearance: none;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  background: #505050;
+  border: 0;
+  border-radius: 25px;
+  width: 100%;
+  height: 5.4px;
+  cursor: pointer;
+}
+input[type=range]::-webkit-slider-thumb {
+  margin-top: -4.3px;
+  width: 14px;
+  height: 14px;
+  background: #282828;
+  border: 0px solid rgba(0, 0, 0, 0);
+  border: 0;
+  border-radius: 15px;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #5f5f5f;
+}
+input[type=range]::-moz-range-track {
+  background: #505050;
+  border: 0;
+  border-radius: 25px;
+  width: 100%;
+  height: 5.4px;
+  cursor: pointer;
+}
+input[type=range]::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  background: #282828;
+  border: 0px solid rgba(0, 0, 0, 0);
+  border: 0;
+  border-radius: 15px;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  border-width: 4.3px 0;
+  color: transparent;
+  width: 100%;
+  height: 5.4px;
+  cursor: pointer;
+}
+input[type=range]::-ms-fill-lower {
+  background: #414141;
+  border: 0;
+  border-radius: 50px;
+}
+input[type=range]::-ms-fill-upper {
+  background: #505050;
+  border: 0;
+  border-radius: 50px;
+}
+input[type=range]::-ms-thumb {
+  width: 14px;
+  height: 14px;
+  background: #282828;
+  border: 0px solid rgba(0, 0, 0, 0);
+  border: 0;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-top: 0px;
+  /*Needed to keep the Edge thumb centred*/
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #505050;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #5f5f5f;
+}
+/*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
+how to remove the virtical space around the range input in IE*/
+@supports (-ms-ime-align:auto) {
+  /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
+  input[type=range] {
+    margin: 0;
+    /*Edge starts the margin from the thumb, not the track as other browsers do*/
+  }
+}
+

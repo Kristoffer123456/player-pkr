@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>P7 Kristen Riksradio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="player-card">
+    <div id="now-playing">
+      <audio src="https://radio.p7.no/listen/p7_kristen_riksradio/kristen_riksradio_web" id="audio-player"></audio>
+      <div id="cover-art">
+        <img id="cover-art-image" src="./static/images/placeholder.jpg" width="240" height="240" alt="Laster inn..."class="cover-art">
+      </div>
+      <div id="track-info">
+        <div id="track-title"> 
+          <span id="track-title-text">Laster inn...</span>
+        </div>
+        <div id="track-artist">
+          <span id="track-artist-text">Laster inn...</span>
+        </div>
+        <div id="radio-controls">
+          <button id="play-button" class="control-button"><i class="fas fa-play"></i></button>
+          <div id="volume-control">
+            <button id="volume-button" class="control-button"><i class="fas fa-volume-up"></i></button>
+            <div id="volume-slider"><input type="range" min="0" max="100" value="100"></div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <script src="kristen_riks.js"></script>
+</body>
+</html>
